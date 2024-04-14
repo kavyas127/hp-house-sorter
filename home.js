@@ -17,8 +17,7 @@ function pointsdisp(points) {
     }
     else {
         $("h1").text("Slytherin");
-        $("body").addClass("slytherin");
-        
+        $("body").addClass("slytherin");   
     }
 }
 
