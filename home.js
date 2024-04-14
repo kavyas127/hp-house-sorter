@@ -2,20 +2,26 @@ var qarray = ["Are you courageous?", "Are you a good leader?", "Are you kind?", 
 var points = 0;
 var i = 0;
 
-function pointsdisp(points){
-    if(points >= 8 ){
+function pointsdisp(points) {
+    if (points >= 8) {
         $("h1").text("Gryffindor");
-        $("body").css('background-color', 'red');
+        $("body").css('background-color', '#E72929');
         $("body").css('color', 'white');
     }
-    else if(points >= 6){
+    else if (points >= 6) {
         $("h1").text("Hufflepuff");
+        $("body").css('background-color', '#31363F');
+        $("body").css('color', 'white');
     }
-    else if(points >= 4){
+    else if (points >= 4) {
         $("h1").text("Ravenclaw");
+        $("body").css('background-color', '#074173');
+        $("body").css('color', 'white');
     }
-    else{
+    else {
         $("h1").text("Slytherin");
+        $("body").css('background-color', '#557C55');
+        $("body").css('color', 'white');
     }
 }
 
@@ -25,7 +31,7 @@ $(".buttons-div").hide();
 $(".body-wrapper").show();
 
 $(document).ready(function () {
-    $("#start-but").click(function(){
+    $("#start-but").click(function () {
         $("#start-but").hide();
         $(".buttons-div").show();
         $("h2").text(qarray[i]);
@@ -38,8 +44,8 @@ $(document).ready(function () {
             i++;
             points++;
         }
-        if (i == qarray.length) {
-            $("#yes-button").click(function(){
+        else if (i == qarray.length) {
+            $("#yes-button").click(function () {
                 points++;
                 $(".buttons-div").hide();
                 $("#submit-but").show();
@@ -53,8 +59,8 @@ $(document).ready(function () {
             $("h2").text(qarray[i]);
             i++;
         }
-        if (i == qarray.length) {
-            $("#no-button").click(function(){
+        else if (i == qarray.length) {
+            $("#no-button").click(function () {
                 $(".buttons-div").hide();
                 $("#submit-but").show();
                 $("h2").text("Click on submit for house reveal!");
@@ -62,7 +68,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#submit-but").click(function(){
+    $("#submit-but").click(function () {
         $("h2").text("You belong to:");
         $(".buttons-div").hide();
         pointsdisp(points);
