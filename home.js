@@ -6,6 +6,7 @@ function pointsdisp(points){
     if(points >= 8 ){
         $("h1").text("Gryffindor");
         $("body").css('background-color', 'red');
+        $("body").css('color', 'white');
     }
     else if(points >= 6){
         $("h1").text("Hufflepuff");
@@ -53,7 +54,7 @@ $(document).ready(function () {
             i++;
         }
         if (i == qarray.length) {
-            $("#yes-button").click(function(){
+            $("#no-button").click(function(){
                 $(".buttons-div").hide();
                 $("#submit-but").show();
                 $("h2").text("Click on submit for house reveal!");
