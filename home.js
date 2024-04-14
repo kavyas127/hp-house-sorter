@@ -44,7 +44,7 @@ $(document).ready(function () {
             i++;
             points++;
         }
-        else if (i == qarray.length) {
+        if (i == qarray.length) {
             $("#yes-button").click(function () {
                 points++;
                 $(".buttons-div").hide();
@@ -59,7 +59,7 @@ $(document).ready(function () {
             $("h2").text(qarray[i]);
             i++;
         }
-        else if (i == qarray.length) {
+        if (i == qarray.length) {
             $("#no-button").click(function () {
                 $(".buttons-div").hide();
                 $("#submit-but").show();
