@@ -5,23 +5,20 @@ var i = 0;
 function pointsdisp(points) {
     if (points >= 8) {
         $("h1").text("Gryffindor");
-        $("body").css('background-color', '#E72929');
-        $("body").css('color', 'white');
+        $("body").addClass("gryffindor");
     }
     else if (points >= 6) {
         $("h1").text("Hufflepuff");
-        $("body").css('background-color', '#31363F');
-        $("body").css('color', 'white');
+        $("body").addClass("hufflepuff");
     }
     else if (points >= 4) {
         $("h1").text("Ravenclaw");
-        $("body").css('background-color', '#074173');
-        $("body").css('color', 'white');
+        $("body").addClass("ravenclaw");
     }
     else {
         $("h1").text("Slytherin");
-        $("body").css('background-color', '#557C55');
-        $("body").css('color', 'white');
+        $("body").addClass("slytherin");
+        
     }
 }
 
